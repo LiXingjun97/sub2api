@@ -513,7 +513,7 @@ const tabs = computed(() => {
 })
 
 const visibleMethods = computed(() => getVisibleMethods(checkout.value.methods))
-const enabledMethods = computed(() => Object.keys(visibleMethods.value))
+const enabledMethods = computed(() => Object.keys(visibleMethods.value).filter(type => !type.startsWith('wxpay')))
 const validAmount = computed(() => amount.value ?? 0)
 const balanceRechargeMultiplier = computed(() => {
   const multiplier = checkout.value.balance_recharge_multiplier
