@@ -156,6 +156,7 @@ export default {
     batchImage: '批量生图',
     usage: '使用记录',
     redeem: '兑换',
+    manual: '使用手册',
     affiliate: '邀请返利',
     affiliateManagement: '邀请返利',
     affiliateInviteRecords: '邀请记录',
