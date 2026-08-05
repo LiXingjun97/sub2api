@@ -443,6 +443,22 @@ userManual: {
     apiKeyTitle: 'API Configuration',
     apiKeyDesc: 'After creating an API Key, configure the following address in your tool to get started.',
     baseUrl: 'API Base URL',
+    quickStart: {
+      title: "Quick Start",
+      introTitle: "Welcome to lxjfly!",
+      introDesc: "This is an AI model service platform. Simply put: you recharge here, get an API key, plug it into any AI tool, and you can use ChatGPT, Claude, and other AIs at a fraction of the official price - no VPN needed.",
+      step1Title: "Step 1: Register",
+      step1Desc: "Click the 'Register' button at the top right, fill in your email and password. You'll receive a verification email - click the link inside to verify. (Didn't get it? Check your spam folder)",
+      step2Title: "Step 2: Recharge",
+      step2Desc: "After logging in, click 'Buy Subscription' in the left menu or 'Recharge' on the homepage. Select Alipay, enter the amount, scan the QR code to pay. Your balance will update automatically after payment.",
+      step3Title: "Step 3: Get Your API Key",
+      step3Desc: "Click 'API Keys' in the left menu, then 'Create Key'. The system will generate a string - click 'Copy' to save it. This is your credential for using AI services.",
+      step4Title: "Step 4: Pick a Tool and Start",
+      step4Desc: "Click the tabs below (Codex / Claude Code / Gemini CLI / ChatBox) and follow the steps to enter your API address and key. All you need to do is copy and paste - no technical knowledge required.",
+      step5Title: "Step 5: Monitor Usage",
+      step5Desc: "Click 'Usage Records' in the left menu to check how much you have used and your remaining balance. When balance runs low, repeat Step 2 to recharge.",
+    },
+
       codex: {
         step1Title: "Step 1: Get your API Key",
         step1Desc: "After logging into this platform, click 'API Keys' in the left menu, then 'Create Key'. Copy the generated key - it's just a string of letters and numbers.",
@@ -461,6 +477,7 @@ userManual: {
         helpTitle: "Stuck? Let AI help you!",
         helpDesc: "If you get stuck at any step, open ChatGPT or any AI tool and describe what happened. For example: 'I installed Codex but cannot find where to enter the API address, please guide me step by step.' The AI will walk you through it.",
       },
+
 
     claude: {
       step1Title: 'Install Claude Code',

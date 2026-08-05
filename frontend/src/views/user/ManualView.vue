@@ -50,6 +50,23 @@
           </button>
         </div>
 
+        <!-- Quick Start -->
+        <div v-if="activePlatform === 'quickstart'" class="space-y-4">
+          <div class="rounded-lg border border-primary-200 bg-primary-50 p-5 dark:border-primary-800 dark:bg-primary-950/30">
+            <h3 class="text-base font-bold text-primary-800 dark:text-primary-200">{{ t('userManual.quickStart.introTitle') }}</h3>
+            <p class="mt-2 text-sm leading-relaxed text-primary-700 dark:text-primary-300">{{ t('userManual.quickStart.introDesc') }}</p>
+          </div>
+          <ManualStep :step="1" :title="t('userManual.quickStart.step1Title')" :desc="t('userManual.quickStart.step1Desc')" />
+          <ManualStep :step="2" :title="t('userManual.quickStart.step2Title')" :desc="t('userManual.quickStart.step2Desc')" />
+          <ManualStep :step="3" :title="t('userManual.quickStart.step3Title')" :desc="t('userManual.quickStart.step3Desc')" />
+          <ManualStep :step="4" :title="t('userManual.quickStart.step4Title')" :desc="t('userManual.quickStart.step4Desc')" />
+          <ManualStep :step="5" :title="t('userManual.quickStart.step5Title')" :desc="t('userManual.quickStart.step5Desc')" />
+          <div class="rounded-lg border-2 border-amber-300 bg-amber-50 p-4 dark:border-amber-700 dark:bg-amber-950/30">
+            <p class="text-sm font-semibold text-amber-800 dark:text-amber-300">{{ t('userManual.codex.helpTitle') }}</p>
+            <p class="mt-1 text-sm text-amber-700 dark:text-amber-400">{{ t('userManual.codex.helpDesc') }}</p>
+          </div>
+        </div>
+
         <!-- Codex -->
         <div v-if="activePlatform === 'codex'" class="space-y-3">
           <ManualStep :step="1" :title="t('userManual.codex.step1Title')" :desc="t('userManual.codex.step1Desc')" />
@@ -109,9 +126,10 @@ import ManualStep from '@/components/user/profile/ManualStep.vue'
 
 const { t } = useI18n()
 
-const activePlatform = ref('codex')
+const activePlatform = ref('quickstart')
 
 const platforms = [
+  { key: 'quickstart', name: t('userManual.quickStart.title') },
   { key: 'codex', name: 'Codex' },
   { key: 'claude', name: 'Claude Code' },
   { key: 'gemini', name: 'Gemini CLI' },

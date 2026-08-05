@@ -442,6 +442,22 @@ userManual: {
     apiKeyTitle: 'API 配置信息',
     apiKeyDesc: '在 API Key 管理页面创建密钥后，将以下地址配置到对应工具中即可使用。',
     baseUrl: 'API 地址',
+    quickStart: {
+      title: "快速上手",
+      introTitle: "欢迎使用 lxjfly！",
+      introDesc: "这是一个 AI 模型服务平台，简单说：你在这里充值，然后拿到一个「密钥」，把这个密钥填到 AI 工具里，就能用上 ChatGPT、Claude 等各种 AI 了。比你自己去官网买便宜得多，而且不需要科学上网。",
+      step1Title: "第一步：注册账号",
+      step1Desc: "点击页面右上角的「注册」按钮，填写邮箱和密码。注册后会收到一封验证邮件，点击邮件里的链接完成验证。（没收到邮件？检查一下垃圾箱）",
+      step2Title: "第二步：充值",
+      step2Desc: "登录后点击左侧菜单的「购买订阅」或直接在首页点「充值」。选择支付宝，输入金额，扫码付款。付款成功后你的账户余额会自动增加。",
+      step3Title: "第三步：获取 API Key",
+      step3Desc: "点击左侧菜单「API 密钥」→「创建密钥」，系统会生成一串字母数字。点击「复制」保存好，这就是你使用 AI 的凭证。",
+      step4Title: "第四步：选择工具开始使用",
+      step4Desc: "点击下方对应工具的标签页（Codex / Claude Code / Gemini CLI / ChatBox），按步骤填入 API 地址和密钥即可开始。整个过程只需要复制粘贴，不需要懂任何技术。",
+      step5Title: "第五步：查看用量",
+      step5Desc: "点击左侧菜单「使用记录」，可以随时查看你用了多少、还剩多少余额。余额不足时重复第二步充值即可。",
+    },
+
       codex: {
         step1Title: "第一步：获取 API Key",
         step1Desc: "登录本平台后，点击左侧菜单「API 密钥」→「创建密钥」，复制生成的密钥备用。（就是一串字母数字，不需要理解它是什么）",
@@ -460,6 +476,7 @@ userManual: {
         helpTitle: "搞不定？让 AI 来帮你",
         helpDesc: "如果哪一步卡住了，打开 ChatGPT 或任何 AI 工具，把遇到的问题告诉它，比如「我安装了 Codex 但是不知道怎么填 API 地址，请用最简单的方式告诉我」，AI 会一步步带你解决。",
       },
+
 
     claude: {
       step1Title: '安装 Claude Code',
