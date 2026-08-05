@@ -1,4 +1,4 @@
-﻿<template>
+<template>
   <AppLayout>
     <div class="mx-auto max-w-[950px] space-y-6">
       <!-- Header -->
@@ -54,13 +54,17 @@
         <div v-if="activePlatform === 'codex'" class="space-y-3">
           <ManualStep :step="1" :title="t('userManual.codex.step1Title')" :desc="t('userManual.codex.step1Desc')" />
           <ManualStep :step="2" :title="t('userManual.codex.step2Title')" :desc="t('userManual.codex.step2Desc')" />
-          <ManualStep :step="3" :title="t('userManual.codex.step3Title')" :desc="t('userManual.codex.step3Desc')">
-            <code class="rounded bg-gray-100 px-2 py-1 text-xs dark:bg-dark-800">codex login</code>
-          </ManualStep>
+          <ManualStep :step="3" :title="t('userManual.codex.step3Title')" :desc="t('userManual.codex.step3Desc')" />
           <ManualStep :step="4" :title="t('userManual.codex.step4Title')" :desc="t('userManual.codex.step4Desc')" />
           <ManualStep :step="5" :title="t('userManual.codex.step5Title')" :desc="t('userManual.codex.step5Desc')">
-            <code class="rounded bg-gray-100 px-2 py-1 text-xs dark:bg-dark-800">export CODEX_API_BASE_URL=https://api.lxjfly.com</code>
+            <code class="rounded bg-gray-100 px-2 py-1 text-xs dark:bg-dark-800">https://api.lxjfly.com</code>
           </ManualStep>
+          <ManualStep :step="6" :title="t('userManual.codex.step6Title')" :desc="t('userManual.codex.step6Desc')" />
+          <ManualStep :step="7" :title="t('userManual.codex.step7Title')" :desc="t('userManual.codex.step7Desc')" />
+          <div class="rounded-lg border-2 border-amber-300 bg-amber-50 p-4 dark:border-amber-700 dark:bg-amber-950/30">
+            <p class="text-sm font-semibold text-amber-800 dark:text-amber-300">{{ t('userManual.codex.helpTitle') }}</p>
+            <p class="mt-1 text-sm text-amber-700 dark:text-amber-400">{{ t('userManual.codex.helpDesc') }}</p>
+          </div>
         </div>
 
         <!-- Claude Code -->
