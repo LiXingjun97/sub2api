@@ -1,4 +1,4 @@
-<template>
+﻿<template>
   <AppLayout>
     <div class="mx-auto max-w-[950px] space-y-6">
       <!-- Header -->
@@ -9,31 +9,81 @@
         </h1>
       </div>
 
-      <!-- API Info Card -->
-      <div class="card p-6">
-        <div class="flex items-start gap-3">
-          <Icon name="key" size="sm" class="mt-0.5 shrink-0 text-blue-600 dark:text-blue-400" />
-          <div class="space-y-2 text-sm text-blue-800 dark:text-blue-300">
-            <p class="font-semibold">{{ t('userManual.apiKeyTitle') }}</p>
-            <p>{{ t('userManual.apiKeyDesc') }}</p>
-            <div class="flex items-center gap-2">
-              <code class="rounded bg-blue-100 px-2 py-0.5 text-xs text-blue-900 dark:bg-blue-900/40 dark:text-blue-200">
-                {{ t('userManual.baseUrl') }}: https://api.lxjfly.com
-              </code>
-              <button
-                class="rounded bg-blue-200 px-1.5 py-0.5 text-xs text-blue-700 hover:bg-blue-300 dark:bg-blue-800 dark:text-blue-300 dark:hover:bg-blue-700"
-                :title="t('common.copy')"
-                @click="copyText('https://api.lxjfly.com')"
-              >
-                {{ t('common.copy') }}
-              </button>
+      <!-- Quick Start Table -->
+      <div class="card overflow-hidden">
+        <div class="border-b border-gray-200 bg-primary-50 px-6 py-4 dark:border-dark-700 dark:bg-primary-950/30">
+          <h2 class="text-lg font-semibold text-primary-800 dark:text-primary-200">
+            {{ t('userManual.quickStart.title') }}
+          </h2>
+          <p class="mt-1 text-sm text-primary-600 dark:text-primary-400">
+            {{ t('userManual.quickStart.introDesc') }}
+          </p>
+        </div>
+        <div class="divide-y divide-gray-100 dark:divide-dark-700">
+          <div class="flex items-start gap-4 px-6 py-4">
+            <span class="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-primary-500 text-sm font-bold text-white">1</span>
+            <div class="min-w-0">
+              <p class="text-sm font-semibold text-gray-800 dark:text-gray-200">{{ t('userManual.quickStart.step1Title') }}</p>
+              <p class="text-sm text-gray-600 dark:text-gray-400">{{ t('userManual.quickStart.step1Desc') }}</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-4 px-6 py-4">
+            <span class="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-primary-500 text-sm font-bold text-white">2</span>
+            <div class="min-w-0">
+              <p class="text-sm font-semibold text-gray-800 dark:text-gray-200">{{ t('userManual.quickStart.step2Title') }}</p>
+              <p class="text-sm text-gray-600 dark:text-gray-400">{{ t('userManual.quickStart.step2Desc') }}</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-4 px-6 py-4">
+            <span class="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-primary-500 text-sm font-bold text-white">3</span>
+            <div class="min-w-0">
+              <p class="text-sm font-semibold text-gray-800 dark:text-gray-200">{{ t('userManual.quickStart.step3Title') }}</p>
+              <p class="text-sm text-gray-600 dark:text-gray-400">{{ t('userManual.quickStart.step3Desc') }}</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-4 px-6 py-4">
+            <span class="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-primary-500 text-sm font-bold text-white">4</span>
+            <div class="min-w-0">
+              <p class="text-sm font-semibold text-gray-800 dark:text-gray-200">{{ t('userManual.quickStart.step4Title') }}</p>
+              <p class="text-sm text-gray-600 dark:text-gray-400">{{ t('userManual.quickStart.step4Desc') }}</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-4 px-6 py-4">
+            <span class="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-primary-500 text-sm font-bold text-white">5</span>
+            <div class="min-w-0">
+              <p class="text-sm font-semibold text-gray-800 dark:text-gray-200">{{ t('userManual.quickStart.step5Title') }}</p>
+              <p class="text-sm text-gray-600 dark:text-gray-400">{{ t('userManual.quickStart.step5Desc') }}</p>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- Platform Tabs -->
+      <!-- Tool Guide Section -->
       <div class="card p-6">
+        <h2 class="mb-4 text-lg font-semibold text-gray-900 dark:text-gray-100">{{ t('userManual.apiKeyTitle') }}</h2>
+        <div class="mb-4 rounded-lg bg-blue-50 p-4 dark:bg-blue-950/30">
+          <div class="flex items-start gap-2">
+            <Icon name="key" size="sm" class="mt-0.5 shrink-0 text-blue-600 dark:text-blue-400" />
+            <div class="space-y-2 text-sm text-blue-800 dark:text-blue-300">
+              <p class="font-semibold">{{ t('userManual.apiKeyTitle') }}</p>
+              <p>{{ t('userManual.apiKeyDesc') }}</p>
+              <div class="flex items-center gap-2">
+                <code class="rounded bg-blue-100 px-2 py-0.5 text-xs text-blue-900 dark:bg-blue-900/40 dark:text-blue-200">
+                  {{ t('userManual.baseUrl') }}: https://api.lxjfly.com
+                </code>
+                <button
+                  class="rounded bg-blue-200 px-1.5 py-0.5 text-xs text-blue-700 hover:bg-blue-300 dark:bg-blue-800 dark:text-blue-300 dark:hover:bg-blue-700"
+                  :title="t('common.copy')"
+                  @click="copyText('https://api.lxjfly.com')"
+                >
+                  {{ t('common.copy') }}
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tool Tabs -->
         <div class="mb-4 flex flex-wrap gap-2 border-b border-gray-200 pb-3 dark:border-dark-700">
           <button
             v-for="platform in platforms"
@@ -48,23 +98,6 @@
           >
             {{ platform.name }}
           </button>
-        </div>
-
-        <!-- Quick Start -->
-        <div v-if="activePlatform === 'quickstart'" class="space-y-4">
-          <div class="rounded-lg border border-primary-200 bg-primary-50 p-5 dark:border-primary-800 dark:bg-primary-950/30">
-            <h3 class="text-base font-bold text-primary-800 dark:text-primary-200">{{ t('userManual.quickStart.introTitle') }}</h3>
-            <p class="mt-2 text-sm leading-relaxed text-primary-700 dark:text-primary-300">{{ t('userManual.quickStart.introDesc') }}</p>
-          </div>
-          <ManualStep :step="1" :title="t('userManual.quickStart.step1Title')" :desc="t('userManual.quickStart.step1Desc')" />
-          <ManualStep :step="2" :title="t('userManual.quickStart.step2Title')" :desc="t('userManual.quickStart.step2Desc')" />
-          <ManualStep :step="3" :title="t('userManual.quickStart.step3Title')" :desc="t('userManual.quickStart.step3Desc')" />
-          <ManualStep :step="4" :title="t('userManual.quickStart.step4Title')" :desc="t('userManual.quickStart.step4Desc')" />
-          <ManualStep :step="5" :title="t('userManual.quickStart.step5Title')" :desc="t('userManual.quickStart.step5Desc')" />
-          <div class="rounded-lg border-2 border-amber-300 bg-amber-50 p-4 dark:border-amber-700 dark:bg-amber-950/30">
-            <p class="text-sm font-semibold text-amber-800 dark:text-amber-300">{{ t('userManual.codex.helpTitle') }}</p>
-            <p class="mt-1 text-sm text-amber-700 dark:text-amber-400">{{ t('userManual.codex.helpDesc') }}</p>
-          </div>
         </div>
 
         <!-- Codex -->
@@ -126,10 +159,9 @@ import ManualStep from '@/components/user/profile/ManualStep.vue'
 
 const { t } = useI18n()
 
-const activePlatform = ref('quickstart')
+const activePlatform = ref('codex')
 
 const platforms = [
-  { key: 'quickstart', name: t('userManual.quickStart.title') },
   { key: 'codex', name: 'Codex' },
   { key: 'claude', name: 'Claude Code' },
   { key: 'gemini', name: 'Gemini CLI' },
