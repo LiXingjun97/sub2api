@@ -1,7 +1,7 @@
 <template>
   <div class="card p-6">
     <div class="mb-4 flex items-center gap-2">
-      <BookOpen class="h-5 w-5 text-primary-500" />
+      <Icon name="book" size="lg" />
       <h3 class="text-lg font-semibold text-gray-900 dark:text-gray-100">
         {{ t('userManual.title') }}
       </h3>
@@ -29,7 +29,7 @@
       <!-- API Key Section (shared) -->
       <div class="rounded-lg bg-blue-50 p-4 dark:bg-blue-950/30">
         <div class="flex items-start gap-2">
-          <Key class="mt-0.5 h-4 w-4 shrink-0 text-blue-600 dark:text-blue-400" />
+          <Icon name="key" class="mt-0.5 shrink-0 text-blue-600 dark:text-blue-400" size="sm" />
           <div class="space-y-2 text-sm text-blue-800 dark:text-blue-300">
             <p class="font-semibold">{{ t('userManual.apiKeyTitle') }}</p>
             <p>{{ t('userManual.apiKeyDesc') }}</p>
@@ -100,7 +100,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { useI18n } from 'vue-i18n'
-import { BookOpen, Key } from 'lucide-vue-next'
+import { Icon } from '@/components/icons'
 
 const { t } = useI18n()
 
