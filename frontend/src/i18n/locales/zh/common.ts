@@ -455,7 +455,8 @@ userManual: {
       step4Title: "第四步：下载工具开始使用",
       step4Desc: "根据你要用的工具，在下方资源信息栏下载对应的软件（如 Codex），然后按「使用密钥」弹出的引导完成配置，即可开始使用。",
       },
-      codex:step1Title: "第一步：获取 API Key",
+      codex: {
+        step1Title: "第一步：获取 API Key",
         step1Desc: "登录本平台后，点击左侧菜单「API 密钥」→「创建密钥」，复制生成的密钥备用。（就是一串字母数字，不需要理解它是什么）",
         step2Title: "第二步：下载 Codex 桌面版",
         step2Desc: "打开浏览器访问 codex.openai.com，点击页面中间的「Download」按钮。网站会自动识别你的电脑系统，下载对应的安装文件。不会操作？直接点页面里最大的那个按钮就行。",

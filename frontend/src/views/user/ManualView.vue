@@ -165,7 +165,4 @@ const platforms = [
   { key: 'chatbox', name: 'ChatBox' },
 ]
 
-//function copyText(text: string) {
-  navigator.clipboard.writeText(text)
-}
 </script>
