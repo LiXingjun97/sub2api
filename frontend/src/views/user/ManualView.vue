@@ -1,4 +1,4 @@
-﻿<template>
+<template>
   <AppLayout>
     <div class="mx-auto max-w-[950px] space-y-6">
       <!-- Header -->
@@ -58,32 +58,29 @@
         </div>
       </div>
 
-      <!-- Tool Guide Section -->
+      <!-- Resources Section -->
       <div class="card p-6">
-        <h2 class="mb-4 text-lg font-semibold text-gray-900 dark:text-gray-100">{{ t('userManual.apiKeyTitle') }}</h2>
-        <div class="mb-4 rounded-lg bg-blue-50 p-4 dark:bg-blue-950/30">
-          <div class="flex items-start gap-2">
-            <Icon name="key" size="sm" class="mt-0.5 shrink-0 text-blue-600 dark:text-blue-400" />
-            <div class="space-y-2 text-sm text-blue-800 dark:text-blue-300">
-              <p class="font-semibold">{{ t('userManual.apiKeyTitle') }}</p>
-              <p>{{ t('userManual.apiKeyDesc') }}</p>
-              <div class="flex items-center gap-2">
-                <code class="rounded bg-blue-100 px-2 py-0.5 text-xs text-blue-900 dark:bg-blue-900/40 dark:text-blue-200">
-                  {{ t('userManual.baseUrl') }}: https://api.lxjfly.com
-                </code>
-                <button
-                  class="rounded bg-blue-200 px-1.5 py-0.5 text-xs text-blue-700 hover:bg-blue-300 dark:bg-blue-800 dark:text-blue-300 dark:hover:bg-blue-700"
-                  :title="t('common.copy')"
-                  @click="copyText('https://api.lxjfly.com')"
-                >
-                  {{ t('common.copy') }}
-                </button>
-              </div>
+        <h2 class="mb-3 text-lg font-semibold text-gray-900 dark:text-gray-100">{{ t('userManual.resourceTitle') }}</h2>
+        <p class="mb-4 text-sm text-gray-600 dark:text-gray-400">{{ t('userManual.resourceDesc') }}</p>
+        <div class="space-y-3">
+          <a
+            href="https://openai.com/zh-Hans-CN/codex/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex items-center gap-3 rounded-lg border border-gray-200 p-3 transition-colors hover:border-primary-400 hover:bg-primary-50 dark:border-dark-600 dark:hover:border-primary-600 dark:hover:bg-primary-950/20"
+          >
+            <span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-primary-100 text-primary-600 dark:bg-primary-900/40 dark:text-primary-300">
+              <Icon name="download" size="lg" />
+            </span>
+            <div>
+              <p class="text-sm font-semibold text-gray-800 dark:text-gray-200">{{ t('userManual.codexDownload') }}</p>
+              <p class="text-xs text-gray-500 dark:text-gray-400">openai.com/codex</p>
             </div>
-          </div>
+            <Icon name="external-link" size="sm" class="ml-auto text-gray-400" />
+          </a>
         </div>
-
-        <!-- Tool Tabs -->
+      </div>
+<!-- Tool Tabs -->
         <div class="mb-4 flex flex-wrap gap-2 border-b border-gray-200 pb-3 dark:border-dark-700">
           <button
             v-for="platform in platforms"
