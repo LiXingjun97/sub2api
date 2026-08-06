@@ -76,7 +76,7 @@
               <p class="text-sm font-semibold text-gray-800 dark:text-gray-200">{{ t('userManual.codexDownload') }}</p>
               <p class="text-xs text-gray-500 dark:text-gray-400">openai.com/codex</p>
             </div>
-            <Icon name="external-link" size="sm" class="ml-auto text-gray-400" />
+            <Icon name="externalLink" size="sm" class="ml-auto text-gray-400" />
           </a>
         </div>
       </div>
@@ -165,7 +165,7 @@ const platforms = [
   { key: 'chatbox', name: 'ChatBox' },
 ]
 
-function copyText(text: string) {
+//function copyText(text: string) {
   navigator.clipboard.writeText(text)
 }
 </script>
