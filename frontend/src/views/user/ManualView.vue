@@ -81,6 +81,7 @@
         </div>
       </div>
 <!-- Tool Tabs -->
+      <div class="card p-6">
         <div class="mb-4 flex flex-wrap gap-2 border-b border-gray-200 pb-3 dark:border-dark-700">
           <button
             v-for="platform in platforms"
